@@ -14,6 +14,172 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+        <style>
+            .tb
+{
+    display: table;
+    width: 100%;
+}
+
+.td
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+input, button
+{
+    color: #fff;
+    font-family: Nunito;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+#cover
+{
+    
+    width: 100%;
+    padding: 19px;
+    margin: 0px auto;
+    background-color: #9f9f9f;
+    border-radius: -65px;
+    box-shadow: 0 10px 40px #999999, 0 0 0 20px #ffffffeb;
+    transform: scale(0.6);
+    transform: scale(0.6);
+}
+
+form
+{
+    height: 96px;
+}
+
+input[type="text"]
+{
+    width: 100%;
+    height: 96px;
+    font-size: 60px;
+    line-height: 1;
+}
+
+input[type="text"]::placeholder
+{
+    color: #ffffff;
+}
+
+#s-cover
+{
+    width: 1px;
+    padding-left: 35px;
+}
+
+button
+{
+    position: relative;
+    display: block;
+    width: 84px;
+    height: 96px;
+    cursor: pointer;
+}
+
+#s-circle
+{
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 43px;
+    height: 43px;
+    margin-top: 0;
+    border-width: 15px;
+    border: 15px solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+
+button span
+{
+    position: absolute;
+    top: 68px;
+    left: 43px;
+    display: block;
+    width: 45px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+
+button span:before, button span:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle
+{
+    top: -1px;
+    width: 67px;
+    height: 15px;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#s-cover:hover span
+{
+    top: 50%;
+    left: 56px;
+    width: 25px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before
+{
+    bottom: 11px;
+    transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:after
+{
+    bottom: -11px;
+    transform: rotateZ(-52deg);
+}
+#s-cover:hover button span:before, #s-cover:hover button span:after
+{
+    right: -6px;
+    width: 40px;
+    background-color: #fff;
+}
+
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-family: Nunito;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #ff7575;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(255, 117, 117, 0.86);
+  z-index: 125;
+}
+        </style>
     </head>
         <body class="fixed-nav sticky-footer bg-dark" id="page-top">
         <!-- Navigation-->
@@ -126,18 +292,7 @@
                         </a>
                     </div>
                 </li>
-                <li class="nav-item">
-                <form class="form-inline my-2 my-lg-0 mr-lg-2">
-                    <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for...">
-                    <span class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                        <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                    </div>
-                </form>
-                </li>
+               
                 <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
                     <i class="fa fa-fw fa-sign-out"></i>Logout</a>
@@ -161,48 +316,32 @@
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I
                         </p>
                         <hr>
-                        <table>
-                        <thead>
-                            <tr>
-                            <th scope="col">Services</th>
-                            <th scope="col">Buying</th>
-                            <th scope="col">Sales</th>
-                            <th scope="col">Buy</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td data-label="Account">Bigo 500 coin</td>
-                            <td data-label="Due Date">50.000</td>
-                            <td data-label="Amount">60.000</td>
-                            <td data-label="Period"><a  style="color: #fff;" href="#"><button type="button" class="btn btn-primary">Pay Now</button></a></td>
-                            </tr>
-                            <tr>
-                            <td scope="row" data-label="Account">Bigo 1000 coin</td>
-                            <td data-label="Due Date">50.000</td>
-                            <td data-label="Amount">60.000</td>
-                            <td data-label="Period"><a  style="color: #fff;" href="#"><button type="button" class="btn btn-primary">Pay Now</button></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row" data-label="Account">Bigo 2000 coin</td>
-                                <td data-label="Due Date">50.000</td>
-                                <td data-label="Amount">60.000</td>
-                                <td data-label="Period"><a  style="color: #fff;" href="#"><button type="button" class="btn btn-primary">Pay Now</button></a></td>
-                            </tr>
-                            <tr>
-                                <td scope="row" data-label="Account">Bigo 5000 coin</td>
-                                <td data-label="Due Date">50.000</td>
-                                <td data-label="Amount">60.000</td>
-                                <td data-label="Period"><a  style="color: #fff;" href="#"><button type="button" class="btn btn-primary">Pay Now</button></a></td>
-                            </tr>
-                        </tbody>
-                        </table>
-                        <div class="multi-pay">
-                            
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <tr>
+                                    <td>Bigo Live</td>
+                                    <td>50.000 coins</td>
+                                </tr>
+                            </table>
+                            <hr>
+                        <div id="content">
+                            <div id="cover">
+                                    <form method="get" action="">
+                                    <div class="tb">
+                                        <div class="td"><input type="text" placeholder="Search" required></div>
+                                        <div class="td" id="s-cover">
+                                        <button type="submit">
+                                            <div id="s-circle"></div>
+                                            <span></span>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            <p class="text-center">value name</p>
                         </div>
+                        <button style="margin: 10px auto;width: 90%;text-align: center;}" type="button" class="btn btn-primary btn-lg btn-block">Send</button>
                     </div>
                 </div>
-                
             </div>
         </div> 
             <!-------------------------body finish-------------------------------->
